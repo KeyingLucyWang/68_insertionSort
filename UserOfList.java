@@ -1,11 +1,14 @@
 /**
  Test list features.
  */
+
+import java.util.ArrayList;
+
 public class UserOfList {
-    private static List_inArraySlots list;
+    private static ArrayList<String> list;
 
     public static void main( String[] args ) {
-        list = new List_inArraySlots();
+        list = new ArrayList<String>();
 
         System.out.println( "number of elements: " + list.size() );
         System.out.println( "empty list: " + list);
@@ -13,11 +16,19 @@ public class UserOfList {
         /* Populate the list with elements, but with a small enough
            number that we expect no invocation of expand().
         */
-        int elemIndex;
-        for( elemIndex = 0; elemIndex < 10; elemIndex++ ) {
-            list.add( (int)(Math.random() * 10)); // differs from index, but similar
-            System.out.println( "number of elements: " + list.size() );
-        }
+
+	list.add( "E");
+list.add( "D");
+list.add( "A");
+list.add( "B");
+list.add( "F");
+list.add( "C");
+list.add( "G");
+        //int elemIndex;
+        //for( elemIndex = 0; elemIndex < 10; elemIndex++ ) {
+         //   list.add( (int)(Math.random() * 10)); // differs from index, but similar
+        //    System.out.println( "number of elements: " + list.size() );
+       // }
         System.out.println("initial population of " + list.size() + " elements:");
         System.out.println( list + System.lineSeparator());
 
